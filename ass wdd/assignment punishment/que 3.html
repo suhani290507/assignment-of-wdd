@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Css Dropdown navigation</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+       }
+
+    body {
+      font-family: Arial,sans-serif;
+    }
+
+    .navbar{
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+    .navbar a:hover, 
+    .dropdown:hover >a{
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+      
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#">HOME</a>
+  <div class="Dropdown">
+    <a href="#">SERVICES</a>
+    <div class="dropdown-content">
+      <a href="#">WEB DESIGN</a>
+      <a href="#">DEVELOPMENT</a>
+      <a href="#">SEO</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#">ABOUT</a>
+    <div class="dropdown-content">
+      <a href="#">TEAM</a>
+      <a href="#">COMPANY</a>
+    </div>
+  </div>
+  <a href="#">CONTACT</a>
+</div>
+</body>
+</html>
